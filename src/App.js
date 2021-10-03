@@ -24,8 +24,9 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <Container/>
       <Countries countries={countries}/>
-     <Container/>
+     
      
     </div>
   );
