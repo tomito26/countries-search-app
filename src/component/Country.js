@@ -1,5 +1,5 @@
 const Country = ({ country }) =>{
-    console.log(country)
+    
     return(
     <div className="card">
         <img src={country.flag} alt={`${country.name}'s flag'`}/>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const SearchCountryForm = ({ SearchCountry }) =>{
+const SearchCountryForm = ({ searchCountry }) =>{
     const[value,setValue] = useState("")
     
     const handleSubmit = (e) =>{
@@ -9,7 +9,7 @@ const SearchCountryForm = ({ SearchCountry }) =>{
             alert('Please enter search word')
             return
         }
-        SearchCountry(value);
+        searchCountry(value);
         setValue("")
     }
 

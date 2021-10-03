@@ -1,9 +1,9 @@
 import Country from './Country'
 const Countries = ({ countries }) =>{
-    console.log(countries)
+   
     return(
     <div className="wrapper">
-        {countries.map((country)=> <Country key={country.alphacode} country={country} />)}
+        {countries.map((country)=> <Country key={country.alpha2Code} country={country} />)}
     </div>
     );
 }

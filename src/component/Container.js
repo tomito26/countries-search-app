@@ -1,9 +1,9 @@
 import SearchCountryForm from './SearchCountryForm';
 import FilteredCountries from './FilteredCountries';
-const Container = () =>{
+const Container = ({ searchCountry }) =>{
     return(
     <div className="container">
-        <SearchCountryForm />
+        <SearchCountryForm searchCountry={searchCountry}/>
         <FilteredCountries />
     </div>
     );
