@@ -1,14 +1,20 @@
+import { useState } from "react";
+
 const SearchCountriesForm = () =>{
+    const[value,setValue] = useState("")
+
     return(
-    <form>
-        <input 
-         type="text" 
-         className="form-control" 
-         placeholder=""
-         value={value} 
-         onChange={e=>setValue(e.target.value)}
-        />
-    </form>
+    <div>
+        <form>
+            <input 
+                type="text" 
+                className="form-control" 
+                placeholder="search for a country...."
+                value={value} 
+                onChange={e=>setValue(e.target.value)}
+            />
+        </form>
+    </div>
     );
 }
 

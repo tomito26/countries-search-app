@@ -32,3 +32,24 @@ nav p span{
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 600;
 }
+
+.form-control{
+  width: 350px;
+  border: none;
+  margin: 55px;
+  padding:9px 20px;
+  border-radius: 5px;
+  color: hsl(0, 0%, 52%);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0,0.3);
+  font-size: 15px;
+  font-family: 'Nunito Sans', sans-serif;
+
+}
+.form-control::placeholder{
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 15px;
+  color: hsl(0, 0%, 52%);
+}
+.form-control:focus{
+  outline: none;
+}
