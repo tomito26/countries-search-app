@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const SearchCountriesForm = () =>{
+const SearchCountryForm = () =>{
     const[value,setValue] = useState("")
 
     return(
@@ -18,4 +18,4 @@ const SearchCountriesForm = () =>{
     );
 }
 
-export default SearchCountriesForm
+export default SearchCountryForm

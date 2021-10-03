@@ -1,14 +1,15 @@
 import { useState, useEffect } from 'react';
 import Header from './component/Header';
 import Countries from './component/Countries';
-import SearchCountriesForm from './component/SearchCountryForm';
+
+import Container from './component/Container';
 
 function App() {
   return (
     <div className="App">
       <Header />
       <Countries />
-      <SearchCountriesForm/>
+     <Container/>
      
     </div>
   );
