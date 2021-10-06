@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { BrowserRouter as Router,Route,Switch } from 'react-router-dom';
 import Header from './component/Header';
 import Countries from './component/Countries';
 import Container from './component/Container';
@@ -34,14 +35,24 @@ function App() {
     
   }
   return (
-    <div className="App">
-      <Header />
-      <Container searchCountry={searchCountry}/>
-      <Countries countries={countries}/>
-     
-     
-     
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <Container searchCountry={searchCountry} />
+        <Route path="/" exact render={(prop)=>(
+            <>
+              <Countries countries={countries} />
+            </>
+        )}/>
+        <Route path='/search' render={(prop) => (
+          <>
+            <SearchResults results={searchItem} />
+          </>
+        )}/>
+        
+            
+      </div>
+    </Router>
   );
 }
 

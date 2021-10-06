@@ -166,4 +166,49 @@ nav p span{
   margin-left: 5px;
   
 }
+.search-results{
+  padding: 20px;
+  margin: 20px 30px;
+  display: flex;
+  
+}
+.search-results img{
+  height: 300px;
+  width: 500px;
+  object-fit: cover;
+  object-position: center;
+  margin-right: 100px;
+}
+.details{
+  margin-top: 20px;
+
+}
+.detail-info{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-column-gap: 6em;
+}
+.results-body h3{
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 20px;
+  margin-top: 40px;
+}
+.search-info p{
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.search-info p .info-header{
+  font-weight: 600;
+  margin-right: 10px;
+}
+.more-info p{
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.more-info p .info-header{
+  font-weight: 600;
+  margin-right: 10px;
+  
+}
 
