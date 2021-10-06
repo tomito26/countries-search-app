@@ -229,6 +229,18 @@ nav p span{
 }
 
 .btn{
-  padding: 5px 10px;
+  padding: 5px 35px;
+  font-size: 14px;
+  font-family: 'Nunito Sans', sans-serif;
+  margin: 55px;
+  border-radius: 5px;
+  border: none;
+  background-color: #fff;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0,0.3);
+  cursor: pointer;
+}
+.btn i{
+  margin-right: 10px;
+  
 }
 
