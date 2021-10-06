@@ -211,4 +211,24 @@ nav p span{
   margin-right: 10px;
   
 }
+.results-body p {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.results-body p .info-header{
+  font-weight: 600;
+  margin-right: 10px;
+}
+.border-countries{
+  background-color: #fff;
+  padding:5px 12px;
+  margin-left: 10px;
+  border-radius: 3px;
+  border: none;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0,0.3);
+}
+
+.btn{
+  padding: 5px 10px;
+}
 

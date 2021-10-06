@@ -4,6 +4,7 @@ import Header from './component/Header';
 import Countries from './component/Countries';
 import Container from './component/Container';
 import SearchResults from './component/SearchResults';
+import Button from './component/Button';
 
 
 function App() {
@@ -38,14 +39,16 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        <Container searchCountry={searchCountry} />
+        
         <Route path="/" exact render={(prop)=>(
             <>
+              <Container searchCountry={searchCountry} />
               <Countries countries={countries} />
             </>
         )}/>
         <Route path='/search' render={(prop) => (
           <>
+            <Button />
             <SearchResults results={searchItem} />
           </>
         )}/>

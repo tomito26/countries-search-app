@@ -21,8 +21,8 @@ const SearchResults = ({ results }) =>{
                         <p><span className="info-header">Languages:</span><span className="info-body">{results[0] === undefined ? "" : results[0].languages.map(langauge=> `${langauge.name},`)}</span></p> 
                     </div>
                 </div>
-                {/* <p><span className="info-header">Border countries:</span>{results[0] === undefined ? "" : results[0].borders.map((border,index) => <span key={index} className="border-ccountries">{border}</span>)}</p> */}
             </div>
+             <p><span className="info-header .footer">Border countries:</span>{results[0] === undefined ? "" : results[0].borders.map((border,index) => <button key={index} className="border-countries">{border}</button>)}</p>
         </div>
 
     </div>
