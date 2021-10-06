@@ -2,11 +2,12 @@ import { useState, useEffect } from 'react';
 import Header from './component/Header';
 import Countries from './component/Countries';
 import Container from './component/Container';
+import SearchResults from './component/SearchResults';
 
 
 function App() {
   const[countries,setCountries] = useState([]);
-  const[searchItem,setSearchItem] = useState("")
+  const[searchItem,setSearchItem] = useState({})
   const[darkMode,setDarkMode] = useState(false)
 
   useEffect(()=>{
@@ -14,12 +15,9 @@ function App() {
       const countriesData = await fetchCountries();
       setCountries(countriesData);
     }
-    const fetchCountry = () =>{
-      const search = searchCountry();
-      setSearchItem(search)
-    }
+   
     getCountries();
-    fetchCountry()
+    
     
   },[]);
 
@@ -29,14 +27,10 @@ function App() {
     return data;
   };
 
- 
-
- 
-
   const searchCountry = async (country) =>{
       const res = await fetch(`https://restcountries.com/v2/name/${country}`);
       const data = await res.json();
-      return data;
+      setSearchItem(data)
     
   }
   return (
@@ -44,6 +38,7 @@ function App() {
       <Header />
       <Container searchCountry={searchCountry}/>
       <Countries countries={countries}/>
+     
      
      
     </div>
