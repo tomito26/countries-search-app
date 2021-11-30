@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
-import { BrowserRouter as Router,Route,Switch } from 'react-router-dom';
+import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
+import Africa from './component/Africa';
+import America from './component/America';
+import Asia from './component/Asia';
+import CountryInfo from './component/CountryInfo';
 import Header from './component/Header';
-import Countries from './component/Countries';
-import Container from './component/Container';
-import SearchResults from './component/SearchResults';
-import Button from './component/Button';
+import Home from './component/Home';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
     }
    
     getCountries();
+    searchCountry()
     
     
   },[]);
@@ -28,32 +30,23 @@ function App() {
     const data = await res.json();
     return data;
   };
-
-  const searchCountry = async (country) =>{
-      const res = await fetch(`https://restcountries.com/v2/name/${country}`);
-      const data = await res.json();
-      setSearchItem(data)
-    
+  const searchCountry = (item) =>{
+    setSearchItem(item)
+  
   }
+//  console.log(countries)
+  
   return (
     <Router>
       <div className="App">
         <Header />
-        
-        <Route path="/" exact render={(prop)=>(
-            <>
-              <Container searchCountry={searchCountry} />
-              <Countries countries={countries} />
-            </>
-        )}/>
-        <Route path='/search' render={(prop) => (
-          <>
-            <Button />
-            <SearchResults results={searchItem} />
-          </>
-        )}/>
-        
-            
+        <Routes>
+          <Route path="/" element={<Home countries={countries}/>}/>
+          <Route path="/:countryId" element={<CountryInfo/>}/>
+          <Route path="/africa" element={<Africa countries={countries}/>}/>
+          <Route path="/asia" element={<Asia countries={countries}/>}/>
+          <Route path="/america" element={<America countries={countries}/>}/>
+        </Routes>   
       </div>
     </Router>
   );

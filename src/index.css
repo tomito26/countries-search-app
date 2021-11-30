@@ -19,10 +19,13 @@ nav{
   justify-content: space-between;
   margin: 0 40px;
 }
-nav h2{
+nav h3 .nav-link{
+  text-decoration: none;
   font-size: 20px;
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 800;
+  color: hsl(200, 15%, 8%);
+  text-decoration: none;
 }
 nav p i{
   margin-right: 10px;
@@ -31,6 +34,7 @@ nav p i{
 nav p span{
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 600;
+  color: hsl(200, 15%, 8%);
 }
 
 .container{
@@ -112,7 +116,7 @@ nav p span{
   transition: all 0.4s ease;
 }
 
-.dropdown-menu ul li a{
+.dropdown-menu ul li .dropdown-link{
   text-decoration: none;
   color:hsl(200, 15%, 8%);
   padding: 5px;
@@ -122,19 +126,29 @@ nav p span{
 .dropdown-menu button:focus + ul{
   opacity: 1;
   pointer-events: all;
+  
+}
+.wrapper-header{
+  font-size: 24px;
+  margin: 55px 55px 0 55px;
+  font-family: 'Nunito Sans', sans-serif;
 }
 .wrapper{
   display: grid;
   grid-template-columns: repeat(4,1fr);
   /* grid-template-rows: minmax(300px); */
   grid-gap: 1.5em;
-  margin: 0 55px;
+  margin:20px 55px;
 }
 .card{
   background: hsl(0, 0%, 100%);
   border-radius: 5px;
   margin-bottom: 20px;
   box-shadow: 1px 1px 4px rgba(0, 0, 0,0.3);
+  
+}
+.card-link{
+  text-decoration: none;
 }
 .card img{
   width: 100%;
@@ -219,16 +233,10 @@ nav p span{
   font-weight: 600;
   margin-right: 10px;
 }
-.border-countries{
-  background-color: #fff;
-  padding:5px 12px;
-  margin-left: 10px;
-  border-radius: 3px;
-  border: none;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0,0.3);
-}
+
 
 .btn{
+  display: inline-block;
   padding: 5px 35px;
   font-size: 14px;
   font-family: 'Nunito Sans', sans-serif;
@@ -238,9 +246,62 @@ nav p span{
   background-color: #fff;
   box-shadow: 1px 1px 4px rgba(0, 0, 0,0.3);
   cursor: pointer;
+  text-decoration: none;
+  color: hsl(200, 15%, 8%);
 }
 .btn i{
   margin-right: 10px;
   
 }
-
+.country-wrapper{
+  margin: 0 55px;
+  display: flex;
+}
+.country-wrapper img{
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+  margin-right: 55px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0,0.3)
+}
+.country-details{
+  margin-top: 55px;
+}
+.country-details h2{
+   font-size: 24px;
+   font-family: 'Nunito Sans', sans-serif;
+   margin-bottom: 20px;
+   color: hsl(200, 15%, 8%);
+}
+.title-info {
+  font-size: 14px;
+  font-family: 'Nunito Sans', sans-serif;
+  color: hsl(200, 15%, 8%);
+  font-weight: 600;
+}
+.country-detail{
+  margin-left: 10px;
+  color: hsl(200, 15%, 8%);
+  font-weight: 300;
+  font-size: 14px;
+}
+.details{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-column-gap: 3rem;
+  
+}
+.more-details{
+  margin-left: 100px;
+}
+.country-details .border{
+  margin-top: 40px;
+}
+.border-countries{
+  background-color: #fff;
+  padding:3px 5px;
+  margin-left: 10px;
+  border-radius: 3px;
+  border: none;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0,0.3);
+}

@@ -1,6 +1,7 @@
 import SearchCountryForm from './SearchCountryForm';
 import FilteredCountries from './FilteredCountries';
-const Container = ({ searchCountry }) =>{
+
+const ContainerDisplay = ({ searchCountry }) =>{
     return(
     <div className="container">
         <SearchCountryForm searchCountry={searchCountry}/>
@@ -8,4 +9,4 @@ const Container = ({ searchCountry }) =>{
     </div>
     );
 }
-export default Container
+export default ContainerDisplay

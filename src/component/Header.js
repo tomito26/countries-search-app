@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
+
 const Header = () =>{
     return(
     <header>
         <nav>
-            <h3>Where in the world?</h3>
+            <h3><Link className="nav-link" to="/">Where in the world?</Link></h3>
             <p>
                 <i className="far fa-moon"></i>
                 <span>Dark Mode</span>
