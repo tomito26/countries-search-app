@@ -4,6 +4,7 @@ import Africa from './component/Africa';
 import America from './component/America';
 import Asia from './component/Asia';
 import CountryInfo from './component/CountryInfo';
+import Europe from './component/Europe';
 import Header from './component/Header';
 import Home from './component/Home';
 
@@ -46,6 +47,7 @@ function App() {
           <Route path="/africa" element={<Africa countries={countries}/>}/>
           <Route path="/asia" element={<Asia countries={countries}/>}/>
           <Route path="/america" element={<America countries={countries}/>}/>
+          <Route path="/europe" element={<Europe countries={countries}/>}/>
         </Routes>   
       </div>
     </Router>
