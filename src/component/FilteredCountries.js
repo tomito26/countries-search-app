@@ -7,10 +7,10 @@ const FilteredCountries = () =>{
             <button><i className="fas fa-angle-down"></i></button>
             <ul>
                 <li><a className="dropdown-link" href="/africa">Africa</a></li>
-                <li><a className="dropdown-link" href="#america">America</a></li>
-                <li><a className="dropdown-link" href="#asia">Asia</a></li>
-                <li><a className="dropdown-link" href="#europe">Europe</a></li>
-                <li><a className="dropdown-link" href="#oceania">Oceania</a></li>
+                <li><a className="dropdown-link" href="/america">America</a></li>
+                <li><a className="dropdown-link" href="/asia">Asia</a></li>
+                <li><a className="dropdown-link" href="/europe">Europe</a></li>
+                <li><a className="dropdown-link" href="/oceania">Oceania</a></li>
             </ul>
         </div>
     </div>)

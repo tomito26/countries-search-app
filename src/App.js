@@ -7,6 +7,7 @@ import CountryInfo from './component/CountryInfo';
 import Europe from './component/Europe';
 import Header from './component/Header';
 import Home from './component/Home';
+import Oceania from './component/Oceania';
 
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
           <Route path="/asia" element={<Asia countries={countries}/>}/>
           <Route path="/america" element={<America countries={countries}/>}/>
           <Route path="/europe" element={<Europe countries={countries}/>}/>
+          <Route path="/oceania" element={<Oceania countries={countries}/>}/>
         </Routes>   
       </div>
     </Router>
