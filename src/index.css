@@ -79,40 +79,47 @@ nav p span{
   color: hsl(0, 0%, 52%);
   cursor: pointer;
 }
-.menu{
+.dropdown-menu{
   background-color: hsl(0, 0%, 100%);
   width: 180px;
-  display: flex;
-  justify-content: space-between;
   padding: 10px;
   box-shadow: 1px 1px 4px rgba(0, 0, 0,0.3);
   position: relative;
+  user-select: none;
   border-radius: 5px;
 }
-.menu p{
+.dropdown-btn{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+  cursor: pointer;
+}
+.dropdown-btn p{
   color:hsl(200, 15%, 8%);
   font-size: 14px;
   font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
   
 }
-.dropdown-menu button{
+.dropdown-btn button{
   background-color:transparent;
   border: none;
   cursor: pointer;
 }
 .dropdown-menu ul{
-  width: 180px;
+  width: 100%;
   background-color: hsl(0, 0%, 100%);
-  margin-top: 20px;
+  /* margin-top: 10px; */
   position: absolute;
+  top: 100%;
   left: 0;
   list-style: none;
   box-shadow: 1px 1px 4px rgba(0, 0, 0,0.3);
   padding: 10px;
   border-radius: 5px;
-  opacity: 0;
   transform: translateY(10px);
   transition: all 0.4s ease;
+  font-size: 14px;
 }
 
 .dropdown-menu ul li .dropdown-link{
@@ -122,11 +129,13 @@ nav p span{
   font-family: 'Nunito Sans', sans-serif;
   
 }
-.dropdown-menu button:focus + ul{
-  opacity: 1;
-  pointer-events: all;
-  
+.dropdown-menu ul li{
+  transition: all 0.2s;
 }
+.dropdown-menu ul li:hover{
+  background-color: #f4f4f4;
+}
+
 .wrapper-header{
   font-size: 24px;
   margin: 55px 55px 0 55px;

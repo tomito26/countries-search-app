@@ -1,11 +1,11 @@
 import SearchCountryForm from './SearchCountryForm';
-import FilteredCountries from './FilteredCountries';
+import DropdownMenu from './DropdownMenu';
 
 const ContainerDisplay = ({ searchCountry }) =>{
     return(
     <div className="container">
         <SearchCountryForm searchCountry={searchCountry}/>
-        <FilteredCountries />
+        <DropdownMenu />
     </div>
     );
 }
